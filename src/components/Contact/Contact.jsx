@@ -4,20 +4,20 @@ import css from './Contact.module.css';
 
 const Contact = ({ id, name, number, onDelete }) => {
   return (
-    <div className={css.wrapper}>
-      <div className={css.item}>
+    <div className={css.item}>
+      <div className={css.wrapper}>
         <h3 className={css.title}>
-          <RiContactsFill size={22} />
+          <RiContactsFill className={css.icon} />
           {name}
         </h3>
         <p className={css.number}>
-          <FaPhoneAlt size={22} />
+          <FaPhoneAlt className={css.icon} />
           {number}
         </p>
-        <button className={css.btn} onClick={() => onDelete(id)}>
-          Delete
-        </button>
       </div>
+      <button className={css.btn} onClick={() => onDelete(id)}>
+        Delete
+      </button>
     </div>
   );
 };

@@ -1,9 +1,9 @@
 import Contacts from '/contacts.json';
 import { useEffect, useState } from 'react';
-import ContactForm from './ContactForm/ContactForm';
-import SearchBox from './SearchBox/SearchBox';
-import ContactList from './ContactList/ContactList';
-import './App.css';
+import ContactForm from '../ContactForm/ContactForm';
+import SearchBox from '../SearchBox/SearchBox';
+import ContactList from '../ContactList/ContactList';
+import css from './App.module.css';
 
 function App() {
   const [contacts, setContacts] = useState(() => {
@@ -41,8 +41,8 @@ function App() {
 
   return (
     <>
-      <div>
-        <h1>Phonebook</h1>
+      <div className={css.container}>
+        <h1 className={css.title}>Phonebook</h1>
         <ContactForm addContact={addContact} />
         <SearchBox value={filter} onFilter={setFilter} />
         <ContactList contacts={currentContacts} onDelete={deleteContact} />

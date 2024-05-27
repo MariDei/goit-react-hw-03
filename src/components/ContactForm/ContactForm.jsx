@@ -28,7 +28,7 @@ const ContactForm = ({ addContact }) => {
       }}
       validationSchema={validationSchema}
     >
-      <Form className={css.form}>
+      <Form className={css.wrapper}>
         <label htmlFor={fieldNameId}>Name</label>
         <Field className={css.input} type="text" id={fieldNameId} name="name" />
         <ErrorMessage name="name" component="span" />
